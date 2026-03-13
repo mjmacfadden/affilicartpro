@@ -101,6 +101,53 @@ body {
     margin-bottom: 10px;
 }
 
+/* INFO ICON WITH TOOLTIP */
+
+.info-icon {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background: transparent;
+    border: 1.5px solid #cbd5e1;
+    border-radius: 50%;
+    color: #cbd5e1;
+    font-size: 12px;
+    line-height: 14px;
+    text-align: center;
+    font-weight: bold;
+    cursor: help;
+    margin-left: 4px;
+    position: relative;
+    vertical-align: super;
+}
+
+.info-icon:hover::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    background: #334155;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: normal;
+    white-space: nowrap;
+    bottom: 125%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 100;
+}
+
+.info-icon:hover::before {
+    content: '';
+    position: absolute;
+    border: 6px solid transparent;
+    border-top-color: #334155;
+    bottom: 115%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 100;
+}
+
 /* HERO IMAGE WITH PLAY BUTTON */
 
 .hero-image-container {
@@ -261,10 +308,9 @@ Affilicart lets you build shopping experiences directly inside your WordPress co
 
 Instead of sending readers to a single product link, you can let them:
 <ul class="text-muted">
-<li>Select multiple recommended products</li>
-<li>Build curated shopping bundles</li>
-<li>Then send buyers to checkout-ready carts on Amazon
-</li>
+<li>Select multiple recommended affiliate products</li>
+<li>Add them to a single shopping cart</li>
+<li>Send buyers to Amazon with a preloaded checkout experience</li>
 </ul>
 </p>
 
@@ -296,7 +342,7 @@ Affiliate Links Were Designed For Traffic — Not Commerce
 </h2>
 
 <p class="lead">
-Traditional affiliate publishing sends readers away too early.
+Traditional affiliate links sends readers away too soon.
 
 Affiliicart introduces cart-style shopping behavior directly inside your content.
 </p>
@@ -307,7 +353,7 @@ Affiliicart introduces cart-style shopping behavior directly inside your content
 <!-- TESTIMONIALS -->
 <section class="py-5" style="background: white;">
 <div class="container">
-<h2 class="text-center fw-bold mb-5">Loved by Affiliate Creators</h2>
+<h2 class="text-center fw-bold mb-5">Loved by Affiliate Creators <span class="info-icon" data-tooltip="Testimonials represent hypothetical feedback">i</span></h2>
 <div class="row g-4">
 <div class="col-md-4">
 <div class="text-center">
@@ -407,11 +453,14 @@ One click loads curated products into the cart with your affiliate tag.
 <div class="display-6 fw-bold my-3">$0</div>
 
 <ul class="list-unstyled">
-<li class="mb-2"><span class="check">✔</span> Basic affiliate buttons</li>
-<li class="mb-2"><span class="check">✔</span> WordPress compatibility</li>
 <li class="mb-2"><span class="check">✔</span> Affiliate ID Support</li>
 <li class="mb-2"><span class="check">✔</span> WordPress Shortcodes</li>
-<li class="mb-2 text-muted">✖ Cart bundling</li>
+<li class="mb-2"><span class="check">✔</span> Cart-style shopping</li>
+<li class="mb-2 text-muted">✖ Accent color customization</li>
+<li class="mb-2 text-muted">✖ Cart icon placement options</li>
+<li class="mb-2 text-muted">✖ Single product pages</li>
+<li class="mb-2 text-muted">✖ Category pages</li>
+<li class="mb-2 text-muted">✖ Dynamic Pricing</li>
 </ul>
 
 <a href="#" class="btn btn-outline-dark w-100">Download Free</a>
@@ -439,10 +488,14 @@ $19.99
 </p>
 
 <ul class="list-unstyled">
-<li class="mb-2"><span class="check">✔</span> Instant Buy Buttons</li>
-<li class="mb-2"><span class="check">✔</span> Cart Bundling Feature</li>
 <li class="mb-2"><span class="check">✔</span> Affiliate ID Support</li>
 <li class="mb-2"><span class="check">✔</span> WordPress Shortcodes</li>
+<li class="mb-2"><span class="check">✔</span> Cart-style shopping</li>
+<li class="mb-2"><span class="check">✔</span> Accent color customization</li>
+<li class="mb-2"><span class="check">✔</span> Cart icon placement options</li>
+<li class="mb-2"><span class="check">✔</span> Single product pages</li>
+<li class="mb-2"><span class="check">✔</span> Category pages</li>
+<li class="mb-2"><span class="check">✔</span> Dynamic Pricing <span style="font-size: 0.85rem; color: #94a3b8;">(coming soon)</span></li>
 </ul>
 
 <a href="#" class="btn btn-primary-custom w-100">
