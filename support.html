@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Support & Documentation – Affilicart</title>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link href="styles.css" rel="stylesheet">
+</head>
+
+<body>
+
+<!-- NAV -->
+<nav class="navbar sticky-top bg-white border-bottom py-3">
+<div class="container">
+<a href="index.html" class="fw-bold fs-3" style="text-decoration: none; color: inherit;">
+<span style="color:var(--primary)">Affili</span>cart
+</a>
+
+<div style="display: flex; gap: 20px; align-items: center;">
+<a href="support.html" style="color: var(--text-main); text-decoration: none; font-weight: 500;">Documentation</a>
+<a href="index.html#pricing" class="btn btn-primary-custom">Get Started</a>
+</div>
+</div>
+</nav>
+
+<!-- HERO -->
+<section class="hero-support">
+<div class="container">
+<h1 class="display-5 fw-bold mb-3">Support & Documentation</h1>
+<p class="lead text-muted">Everything you need to get started with Affilicart and build your first affiliate cart.</p>
+</div>
+</section>
+
+<!-- DOCS -->
+<section class="py-5">
+<div class="container">
+<div class="row">
+
+<!-- SIDEBAR -->
+<div class="col-lg-3">
+<div class="docs-sidebar">
+<h5>Getting Started</h5>
+<ul>
+<li><a href="#installation">Installation</a></li>
+<li><a href="#quickstart">Quick Start Guide</a></li>
+</ul>
+
+<h5>Features</h5>
+<ul>
+<li><a href="#customization">Features & Customization</a></li>
+<li><a href="#autotagging">Auto-Tagging</a></li>
+<li><a href="#amazon-api-pricing">Amazon API Live Pricing (Beta)</a></li>
+
+</ul>
+
+<h5>Help</h5>
+<ul>
+<li><a href="#faq">FAQ</a></li>
+<li><a href="#troubleshooting">Troubleshooting</a></li>
+</ul>
+</div>
+</div>
+
+<!-- CONTENT -->
+<div class="col-lg-9">
+<div class="docs-content">
+
+<!-- INSTALLATION -->
+<h2 id="installation">Installation</h2>
+
+<div class="highlight-box">
+<strong>Prerequisites:</strong> You'll need an active WordPress site running WordPress 5.0 or higher. Affilicart also works best with a custom domain (not WordPress.com).
+</div>
+
+<h3>Step 1: Install Affilicart</h3>
+
+<p>You can install Affilicart directly from your WordPress admin panel (easiest method) or manually upload it.</p>
+
+<p><strong>Option A: Install from WordPress Admin Dashboard (Recommended)</strong></p>
+<ol>
+<li>Log in to your WordPress admin dashboard</li>
+<li>Go to <strong>Plugins → Add New</strong></li>
+<li>Search for "Affilicart"</li>
+<li>Click <strong>Install Now</strong> on the Affilicart plugin</li>
+<li>Click <strong>Activate</strong></li>
+</ol>
+
+<p><strong>Option B: Manual Upload</strong></p>
+<ol>
+<li>Download Affilicart from <a href="https://wordpress.org/plugins/affilicart/" target="_blank">the WordPress Plugin Directory</a> or <a href="index.html">affilicartpro.com</a></li>
+<li>Log in to your WordPress admin dashboard</li>
+<li>Go to <strong>Plugins → Add New → Upload Plugin</strong></li>
+<li>Choose the <code>affilicart.zip</code> file and click <strong>Install Now</strong></li>
+<li>Click <strong>Activate Plugin</strong></li>
+</ol>
+
+<h3>Step 2: Verify Installation</h3>
+<p>Once activated, you should see "Affilicart" appear in your WordPress admin menu.</p>
+
+<div class="highlight-box">
+<strong>✔ Installation Complete!</strong> You're ready to create your first affiliate cart.
+</div>
+
+<!-- QUICK START -->
+<h2 id="quickstart">Quick Start Guide</h2>
+
+<p>Affilicart is designed to be simple. Here's what you need to know:</p>
+
+<h3>1. Set Up Your Amazon Affiliate ID</h3>
+<p>Before adding products, configure your Amazon Associates affiliate ID:</p>
+
+<h4>What is an Affiliate Tag?</h4>
+<p>Your Amazon Associates ID (affiliate tag) is how Amazon tracks sales from your recommendation and credits your commission. Every product you add to Affilicart uses this tag automatically.</p>
+
+<h4>Finding Your Amazon Associates ID</h4>
+<ol>
+<li>Log in to <strong><a href="https://affiliate-program.amazon.com/home" target="_blank">affiliate-program.amazon.com</a></strong></li>
+<li>Go to <strong>Account Settings</strong></li>
+<li>Under <strong>Tracking IDs</strong>, copy your ID (e.g., "mysite-20")</li>
+</ol>
+
+<h4>Add Your ID to Affilicart</h4>
+<ol>
+<li>Go to <strong>Affilicart → Settings</strong> in your WordPress admin</li>
+<li>Paste your Amazon Associates ID into the settings</li>
+<li>Click <strong>Save Settings</strong></li>
+</ol>
+
+<h4>Verification</h4>
+<p>To verify your tag is working:</p>
+<ol>
+<li>Create a test product with an Amazon link</li>
+<li>Add it to the cart on the front end, click the shopping cart icon to open the modal</li>
+<li>Click "Checkout on Amazon"</li>
+<li>View the URL to ensure your affiliate ID is appended correctly</li>
+</ol>
+
+<h3>2. Add Products</h3>
+<p>Go to <strong>Affilicart → Add Product</strong> to create product entries for your cart.</p>
+
+<p>Fill in the following fields:</p>
+<ul>
+<li><strong>Product Name</strong> — The name of the product (e.g., "Sony WH-1000XM5 Headphones")</li>
+<li><strong>Product Description</strong> — A brief description of why you recommend this product</li>
+<li><strong>ASIN</strong> — The Amazon Standard Identification Number. You can find this on any Amazon product page in the product details section, or in the URL (e.g., for "amazon.com/dp/<strong>B0XXXXX</strong>", the ASIN is B0XXXXX)</li>
+<li><strong>Product Image</strong> — Upload an image of the product. <strong>⚠️ Important:</strong> You must own the right to use this image. Using Amazon's product images without permission is a violation of their Terms of Service. Use product images from the manufacturer, take your own photos, or use licensed images.</li>
+<li><strong>Product Category</strong> — Select the category this product belongs to (e.g., Electronics, Books, Home & Kitchen)</li>
+</ul>
+
+<p>Click <strong>Save</strong> when you're done. Repeat this process for each product you want to add to your cart.</p>
+
+<h3>3. Display Products Using Shortcodes</h3>
+
+<p>Add products to any page or post using these shortcodes:</p>
+
+<table class="table table-sm">
+<tbody>
+<tr>
+<td><strong>Use Case</strong></td>
+<td><strong>Shortcode</strong></td>
+</tr>
+<tr>
+<td>Display all products</td>
+<td><code>[affilicart_grid]</code></td>
+</tr>
+<tr>
+<td>Display a single product</td>
+<td><code>[affilicart_grid id="123"]</code></td>
+</tr>
+<tr>
+<td>Display multiple products</td>
+<td><code>[affilicart_grid id="123,456,789"]</code></td>
+</tr>
+</tbody>
+</table>
+
+<h4>Customize Product Display</h4>
+
+<p>Hide specific fields by adding parameters to your shortcode:</p>
+
+<table class="table table-sm">
+<tbody>
+<tr>
+<td><strong>To Hide</strong></td>
+<td><strong>Add This Parameter</strong></td>
+</tr>
+<tr>
+<td>Product Image</td>
+<td><code>show-image="no"</code></td>
+</tr>
+<tr>
+<td>Product Title</td>
+<td><code>show-title="no"</code></td>
+</tr>
+<tr>
+<td>Product Description</td>
+<td><code>show-description="no"</code></td>
+</tr>
+<tr>
+<td>Product Price</td>
+<td><code>show-price="no"</code></td>
+</tr>
+</tbody>
+</table>
+
+<p><strong>Example:</strong></p>
+<div class="code-block">
+[affilicart_grid id="123" show-description="no"]
+</div>
+
+<p>This displays product 123 without the description.</p>
+
+<h4>Display a Single Button</h4>
+
+<p>Add a standalone "Add to Cart" button for a specific product anywhere on your site:</p>
+
+<div class="code-block">
+[affilicart_button id="123"]
+</div>
+
+<p><strong>Use Case:</strong> Perfect for embedding product buttons within blog posts, sidebars, or anywhere you want a minimal call-to-action without the full product card.</p>
+
+<h4>Display a Link with Hover Card</h4>
+
+<p>Add a clickable text link that shows a product preview (image, name, price) on hover:</p>
+
+<div class="code-block">
+[affilicart_link id="123"]
+</div>
+
+<p>This displays the product name as a link. When you hover over it, a small card appears showing:</p>
+<ul>
+<li>Product image</li>
+<li>Product name</li>
+<li>Add to Cart button</li>
+</ul>
+
+<p><strong>Custom Link Text:</strong> You can change the link text by adding a text parameter:</p>
+
+<div class="code-block">
+[affilicart_link id="123" text="View Details"]
+</div>
+
+<p><strong>Use Case:</strong> Embed product links naturally within blog post text, reviews, or recommendations. Readers can preview the product without leaving your page.</p>
+
+<h4>🎯 Pro Tips</h4>
+<ul>
+<li><strong>Find Product IDs:</strong> Go to Products list — the ID is shown under the product name</li>
+<li><strong>Custom Styling:</strong> Use the Accent Color setting to match your site theme without code changes</li>
+<li><strong>High-Res Images:</strong> The lightbox automatically loads full-resolution product images for better viewing</li>
+<li><strong>Shopping Cart:</strong> All cart data is saved in the browser and persists across page visits until cleared</li>
+</ul>
+
+<h3>4. Publish and Earn</h3>
+<p>When readers click "Checkout on Amazon," they're sent to Amazon with all selected products pre-loaded and your affiliate ID attached to the URL.</p>
+
+<!-- CUSTOMIZATION -->
+<h2 id="customization">Features & Customization</h2>
+
+<p>Affilicart comes with a range of customization options:</p>
+
+<h3>Customize Affilicart</h3>
+<ul>
+<li>Accent color to match your brand</li>
+<li>Cart icon placement (Bottom Right, Bottom Left, Top Right, Top Left)</li>
+<li>Single product pages</li>
+<li>Category pages for organizing carts</li>
+</ul>
+
+<!-- AUTO-TAGGING -->
+<h2 id="autotagging">Auto-Tagging</h2>
+
+<p>Affilicart automatically appends your Amazon affiliate ID to all Amazon links in your products—including regular product links and shortened Amazon links. This ensures that commissions are properly attributed to you.</p>
+
+<p><strong>How it works:</strong></p>
+<ul>
+<li>Any Amazon link (regular or shortened) without an affiliate tag will automatically get your ID appended</li>
+<li>If a link already contains someone else's affiliate ID, Affilicart <strong>will not override it</strong></li>
+<li>If your ID is already present in the link, Affilicart <strong>won't add it twice</strong> — it simply leaves the link unchanged</li>
+</ul>
+
+<p><strong>Example:</strong></p>
+<ul>
+<li><code>https://amazon.com/dp/B0XXXXX</code> → Gets your ID added automatically</li>
+<li><code>https://a.co/d/0dW3D1Vx</code> (shortened link) → Gets your ID added automatically</li>
+<li><code>https://amazon.com/dp/B0XXXXX?tag=other-id-20</code> → ID is not replaced (respects existing attribution)</li>
+<li><code>https://amazon.com/dp/B0XXXXX?tag=your-id-20</code> → Already has your ID, no changes</li>
+</ul>
+
+<p>This feature allows you to confidently add any Amazon product link, knowing that Affilicart will ensure proper commission tracking when the link doesn't already have another affiliate tag. Additionally, if you previously shared a link that lacked tracking information, Affilicart will now credit you for future sales from those historical links.</p>
+
+<!-- AMAZON API PRICING --> 
+<h2 id="amazon-api-pricing">Amazon API Live Pricing (Beta)</h2>
+
+<p>Affilicart is currently developing live Amazon pricing integration to display real-time product prices directly in your carts. This feature is <strong>currently in beta</strong> and <strong>experimental</strong>.</p>
+
+<h3>Current Status</h3>
+<ul>
+<li>In active development and testing</li>
+<li>May not work for all users or all products</li>
+<li>Pricing data may occasionally be unavailable or inaccurate</li>
+<li>Updates and improvements are ongoing</li>
+</ul>
+
+<h3>Important Notes</h3>
+<p>If you encounter issues with live pricing, you can manually input product prices in your cart settings. For now, many users prefer to let readers see current pricing directly on Amazon's checkout page rather than displaying potentially stale prices on your site.</p>
+
+<!-- FAQ -->
+<h2 id="faq">Frequently Asked Questions</h2>
+
+<h3>Do I need an Amazon Associates account?</h3>
+<p>Yes. Affilicart works with your Amazon Associates ID to track and attribute sales. If you don't have an account, <a href="https://affiliate-program.amazon.com/home" target="_blank">sign up here</a>.</p>
+
+<h3>Is there a limit to how many products I can add?</h3>
+<p>No! Create as many products as you need with unlimited carts and customization.</p>
+
+<h3>Can I use Affilicart with other affiliate programs?</h3>
+<p>Currently, Affilicart only supports Amazon Associates. We're exploring other integrations for future releases.</p>
+
+<h3>What happens when a reader clicks "Checkout on Amazon"?</h3>
+<p>Readers are taken to Amazon.com with all your recommended products pre-loaded in their cart. Your affiliate link is automatically included.</p>
+
+<h3>Do I earn commission on all items in the cart?</h3>
+<p>Amazon's standard commission structure applie to all items in a user's cart.</p>
+
+<h3>Why doesn't Affilicart display live product prices?</h3>
+<p>Displaying static or outdated prices violates Amazon's Terms of Service. Affilicart is developing live Amazon API pricing integration, but Amazon API access is only granted to users who meet their qualifying criteria: <strong>a minimum of 10 sales per month generated through your affiliate links in the previous month</strong>.</p>
+
+<p>Until you reach this threshold, Affilicart lets readers see current pricing directly on Amazon's checkout page when they click to purchase. This ensures prices are always accurate and compliant with Amazon's policies.</p>
+
+<h3>Is there a character limit for cart titles or product descriptions?</h3>
+<p>No strict limits, but keep titles under 100 characters and descriptions under 500 characters for best appearance on all devices.</p>
+
+<h3>What if I downgrade from Pro to Lite?</h3>
+<p>Your products remain, but Pro-only features (custom colors, advanced layouts) revert to defaults. You can upgrade anytime without losing data.</p>
+
+<!-- TROUBLESHOOTING -->
+<h2 id="troubleshooting">Troubleshooting</h2>
+
+<h3>Shortcode not displaying</h3>
+
+<p><strong>Problem:</strong> Your shortcode appears as text instead of showing a cart.</p>
+
+<p><strong>Solution:</strong></p>
+<ol>
+<li>Check that the plugin is activated in <strong>Plugins → Installed Plugins</strong></li>
+<li>Verify the shortcode syntax: <code>[affilicart id="225"]</code> (where 225 is your cart ID number)</li>
+<li>Ensure you're editing in the block editor or classic editor, not a page builder (some builders don't support shortcodes)</li>
+<li>Clear your browser cache and reload the page</li>
+</ol>
+
+<h3>Amazon affiliate ID not saving</h3>
+
+<p><strong>Problem:</strong> Settings page won't save your affiliate ID.</p>
+
+<p><strong>Solution:</strong></p>
+<ol>
+<li>Double-check that your ID format is correct (usually ends with "-20")</li>
+<li>Clear browser cache and try again</li>
+<li>Check that you have Administrator access to your WordPress site (only admins can save plugin settings)</li>
+<li>Temporarily disable other plugins to check for conflicts</li>
+</ol>
+
+<h3>Cart appears broken on mobile</h3>
+
+<p><strong>Problem:</strong> The cart looks stretched or misaligned on phones.</p>
+
+<p><strong>Solution:</strong></p>
+<ol>
+<li>Affilicart is fully responsive—this may be a theme conflict</li>
+<li>Check your theme's CSS isn't interfering with cart styling</li>
+<li>Try switching to a default WordPress theme (like Twenty Twenty-Four) to test</li>
+<li>Check if other plugins are conflicting</li>
+</ol>
+
+<h3>Products aren't showing in search</h3>
+
+<p><strong>Problem:</strong> Products don't appear in your WordPress site's search results.</p>
+
+<p><strong>Important:</strong> WordPress's native search function only searches standard post types like posts and pages. Affilicart products are a custom post type and don't appear in the standard WordPress search bar. This is by design — Affilicart products are managed through the Affilicart admin interface, not the WordPress post editor.</p>
+
+<p>If you're trying to find products within Affilicart to add to carts, use the <strong>Affilicart → Products</strong> admin page where you can browse and manage all your products.</p>
+
+<p><strong>To make products searchable on your site:</strong> You can create regular WordPress posts or pages that recommend your products, and those will appear in site search. Use the shortcodes in those posts to display the actual Affilicart products.</p>
+
+<h3>Readers report wrong prices</h3>
+
+<p><strong>Problem:</strong> Cart shows outdated or incorrect Amazon prices.</p>
+
+<p><strong>Solution:</strong></p>
+<p>Prices in Affilicart reflect what Amazon shows at the time of cart creation. Prices update dynamically when readers view the actual Amazon cart. This is normal behavior.</p>
+
+<div class="highlight-box">
+<strong>Still need help?</strong> Contact us with your issue and we'll get back to you quickly.
+</div>
+
+</div>
+</div>
+
+</div>
+</div>
+</section>
+
+<footer class="text-center">
+<div class="container">
+
+<h4 class="text-white mb-3">AffiliCart</h4>
+
+<p class="mb-4">
+Affiliate cart publishing for WordPress creators.
+</p>
+
+<p class="small opacity-50">
+© 2026 AffiliCart. Not affiliated with Amazon.
+</p>
+
+</div>
+</footer>
+
+<script>
+// Simple anchor link highlighting
+document.querySelectorAll('.docs-sidebar a').forEach(link => {
+    link.addEventListener('click', function() {
+        document.querySelectorAll('.docs-sidebar a').forEach(l => l.classList.remove('active'));
+        this.classList.add('active');
+    });
+});
+
+// Highlight current section on scroll
+window.addEventListener('scroll', () => {
+    let current = '';
+    const sections = document.querySelectorAll('h2[id]');
+    
+    sections.forEach(section => {
+        const sectionTop = section.offsetTop;
+        if (pageYOffset >= sectionTop - 200) {
+            current = section.getAttribute('id');
+        }
+    });
+    
+    document.querySelectorAll('.docs-sidebar a').forEach(link => {
+        link.classList.remove('active');
+        if (link.getAttribute('href') === '#' + current) {
+            link.classList.add('active');
+        }
+    });
+});
+</script>
+
+</body>
+</html>
