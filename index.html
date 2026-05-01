@@ -235,9 +235,19 @@ $19.99
 <li class="mb-2"><span class="check">✔</span> Dynamic Pricing <span style="font-size: 0.85rem; color: #94a3b8;">(coming soon)</span></li>
 </ul>
 
-<a href="#" class="btn btn-primary-custom w-100">
+<div class="mb-3">
+<label for="licenses" class="form-label fw-500 mb-2">Select License Type:</label>
+<select id="licenses" class="form-select">
+   <option value="1" selected="selected">Single Site License</option>
+   <option value="3">3-Site License</option>
+   <option value="5">5-Site License</option>
+   <option value="10">10-Site License</option>
+</select>
+</div>
+
+<button id="purchase" class="btn btn-primary-custom w-100">
 Get AffiliCart Today
-</a>
+</button>
 
 <p class="text-center small mt-3 text-muted">30-day money back guarantee.</p>
 
@@ -326,6 +336,39 @@ document.addEventListener('keydown', function(e) {
         videoIframe.src = videoBase; // Stop the video
     }
 });
+</script>
+
+<!-- FREEMIUS CHECKOUT -->
+<script type="text/javascript" src="https://checkout.freemius.com/js/v1/"></script>
+<script type="text/javascript">
+    const handler = new FS.Checkout({
+        product_id: '27347',
+        plan_id: '47295',
+        public_key: 'pk_184ed139b5c0ead9fc973af3ec800',
+        image: 'https://affilicartpro.com/img/affilicart-logo-checkout.png'
+    });
+    
+    document.getElementById('purchase').addEventListener('click', (e) => {
+        e.preventDefault();
+        
+        handler.open({
+            name: 'Affilicart Pro',
+            licenses: document.getElementById('licenses').value,
+            purchaseCompleted: (response) => {
+                // The logic here will be executed immediately after the purchase confirmation
+                console.log('Purchase completed:', response);
+                console.log('User email:', response.user.email);
+                console.log('License key:', response.license.key);
+            },
+            success: (response) => {
+                // The logic here will be executed after the customer closes the checkout, 
+                // after a successful purchase
+                console.log('Checkout closed after successful purchase:', response);
+                console.log('User email:', response.user.email);
+                console.log('License key:', response.license.key);
+            }
+        });
+    });
 </script>
 
 </body>
