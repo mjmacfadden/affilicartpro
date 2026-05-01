@@ -235,16 +235,6 @@ $19.99
 <li class="mb-2"><span class="check">✔</span> Dynamic Pricing <span style="font-size: 0.85rem; color: #94a3b8;">(coming soon)</span></li>
 </ul>
 
-<div class="mb-3">
-<label for="licenses" class="form-label fw-500 mb-2">Select License Type:</label>
-<select id="licenses" class="form-select">
-   <option value="1" selected="selected">Single Site License</option>
-   <option value="3">3-Site License</option>
-   <option value="5">5-Site License</option>
-   <option value="10">10-Site License</option>
-</select>
-</div>
-
 <button id="purchase" class="btn btn-primary-custom w-100">
 Get AffiliCart Today
 </button>
@@ -353,7 +343,7 @@ document.addEventListener('keydown', function(e) {
         
         handler.open({
             name: 'Affilicart Pro',
-            licenses: document.getElementById('licenses').value,
+            licenses: '1',
             purchaseCompleted: (response) => {
                 // The logic here will be executed immediately after the purchase confirmation
                 console.log('Purchase completed:', response);
