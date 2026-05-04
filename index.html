@@ -214,15 +214,22 @@ BEST DEAL
 </div>
 
 <h4 class="fw-bold mt-3">AffiliCart Pro</h4>
-<p class="text-muted">Founders get lifetime access</p>
+<p class="text-muted">For a limited time, founding customers get lifetime access for only:</p>
 
 <div class="display-5 fw-bold my-3" style="color:var(--primary)">
-$19.99
+$49.99
 </div>
 
-<p class="text-muted">
-<span style="text-decoration: line-through; color: #999;">$49.99 annual</span> Lifetime access
-</p>
+
+<div style="background: #f1f5f9; padding: 12px; border-radius: 8px; margin: 12px 0; font-size: 0.9rem;">
+  <label for="billingCycle" style="display: block; margin-bottom: 8px; font-weight: 600;">Choose your plan:</label>
+  <select id="billingCycle" style="width: 100%; padding: 8px; border: 1px solid #cbd5e1; border-radius: 6px; font-size: 0.95rem; cursor: pointer;">
+    <option value="lifetime">💎 Pay Once - $49.99 (Lifetime)</option>
+    <option value="annual">📅 Annual - $71.88/year</option>
+    <option value="monthly">📆 Monthly - $7.99/month</option>
+  </select>
+  <div style="color: #059669; font-weight: 600; margin-top: 8px; font-size: 0.85rem;">Save $48 paying annually vs monthly</div>
+</div>
 
 <ul class="list-unstyled">
 <li class="mb-2"><span class="check">✔</span> Affiliate ID Support</li>
@@ -333,7 +340,6 @@ document.addEventListener('keydown', function(e) {
 <script type="text/javascript">
     const handler = new FS.Checkout({
         product_id: '27347',
-        plan_id: '47295',
         public_key: 'pk_184ed139b5c0ead9fc973af3ec800',
         image: 'https://affilicartpro.com/img/affilicart-logo-checkout.png'
     });
@@ -341,9 +347,12 @@ document.addEventListener('keydown', function(e) {
     document.getElementById('purchase').addEventListener('click', (e) => {
         e.preventDefault();
         
+        const selectedBillingCycle = document.getElementById('billingCycle').value;
+        
         handler.open({
             name: 'Affilicart Pro',
             licenses: '1',
+            billing_cycle: selectedBillingCycle,
             purchaseCompleted: (response) => {
                 // The logic here will be executed immediately after the purchase confirmation
                 console.log('Purchase completed:', response);
