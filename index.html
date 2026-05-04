@@ -184,10 +184,10 @@ One click loads curated products into the cart with your affiliate tag.
 <div class="col-md-4">
 <div class="card-custom h-100">
 
-<h4 class="fw-bold">AffiliCart Lite</h4>
-<p class="text-muted">Start publishing affiliate carts today.</p>
+<h4 class="fw-bold text-center">AffiliCart Lite</h4>
+<p class="text-muted text-center">Start building affiliate carts today.</p>
 
-<div class="display-6 fw-bold my-3">$0</div>
+<div class="display-6 fw-bold my-3 text-center">$0</div>
 
 <ul class="list-unstyled">
 <li class="mb-2"><span class="check">✔</span> Affiliate ID Support</li>
@@ -213,22 +213,25 @@ One click loads curated products into the cart with your affiliate tag.
 BEST DEAL
 </div>
 
-<h4 class="fw-bold mt-3">AffiliCart Pro</h4>
-<p class="text-muted">For a limited time, founding customers get lifetime access for only:</p>
+<h4 class="fw-bold mt-3 text-center">AffiliCart Pro</h4>
+<p class="text-muted text-center">For a limited time, founding customers can get lifetime access for only:</p>
 
-<div class="display-5 fw-bold my-3" style="color:var(--primary)">
+<div class="display-5 fw-bold my-3 text-center" style="color:var(--primary)">
 $49.99
 </div>
 
+<p class="text-muted text-center" style="margin-bottom: 12px;">
+<span style="text-decoration: line-through; color: #999;">$71.88 annually</span>
+</p>
 
 <div style="background: #f1f5f9; padding: 12px; border-radius: 8px; margin: 12px 0; font-size: 0.9rem;">
   <label for="billingCycle" style="display: block; margin-bottom: 8px; font-weight: 600;">Choose your plan:</label>
   <select id="billingCycle" style="width: 100%; padding: 8px; border: 1px solid #cbd5e1; border-radius: 6px; font-size: 0.95rem; cursor: pointer;">
-    <option value="lifetime">💎 Pay Once - $49.99 (Lifetime)</option>
-    <option value="annual">📅 Annual - $71.88/year</option>
-    <option value="monthly">📆 Monthly - $7.99/month</option>
+    <option value="lifetime">Pay Once - $49.99 (Lifetime)</option>
+    <option value="annual">Annual - $71.88/year</option>
+    <option value="monthly">Monthly - $7.99/month</option>
   </select>
-  <div style="color: #059669; font-weight: 600; margin-top: 8px; font-size: 0.85rem;">Save $48 paying annually vs monthly</div>
+  <div id="savingsMessage" style="color: #059669; font-weight: 600; margin-top: 8px; font-size: 0.85rem;">Lowest price available</div>
 </div>
 
 <ul class="list-unstyled">
@@ -333,6 +336,29 @@ document.addEventListener('keydown', function(e) {
         videoIframe.src = videoBase; // Stop the video
     }
 });
+
+// Update savings message based on selected billing cycle
+const billingCycleSelect = document.getElementById('billingCycle');
+const savingsMessage = document.getElementById('savingsMessage');
+
+function updateSavingsMessage() {
+    const selectedCycle = billingCycleSelect.value;
+    const monthlyPrice = 7.99;
+    const annualPrice = 71.88;
+    const lifetimePrice = 49.99;
+    
+    if (selectedCycle === 'lifetime') {
+        savingsMessage.textContent = 'For a limited time only';
+    } else if (selectedCycle === 'annual') {
+        const savings = (monthlyPrice * 12 - annualPrice).toFixed(2);
+        savingsMessage.textContent = `Save $${savings} paying annually vs monthly`;
+    } else if (selectedCycle === 'monthly') {
+        savingsMessage.textContent = 'Subscribe month-to-month';
+    }
+}
+
+billingCycleSelect.addEventListener('change', updateSavingsMessage);
+updateSavingsMessage(); // Initialize on page load
 </script>
 
 <!-- FREEMIUS CHECKOUT -->
