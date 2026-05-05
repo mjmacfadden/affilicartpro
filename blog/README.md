@@ -189,6 +189,8 @@ When the blog grows to 50+ posts, consider implementing:
 
 ## Testing Checklist Before Publishing
 
+- [x] Individual blog post pages render correctly
+- [x] Category pages display all posts in category
 - [ ] Links to all other blog posts work (no 404s)
 - [ ] Internal links to support.html and index.html work
 - [ ] Related posts section has 2-3 active links

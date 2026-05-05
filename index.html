@@ -230,14 +230,15 @@ One click loads curated products into the cart with your affiliate tag.
 <li class="mb-2"><span class="check">✔</span> Affiliate ID Support</li>
 <li class="mb-2"><span class="check">✔</span> WordPress Shortcodes</li>
 <li class="mb-2"><span class="check">✔</span> Cart-style shopping</li>
+<li class="mb-2"><span class="check">✔</span> Single product pages</li>
+<li class="mb-2"><span class="check">✔</span> Category pages</li>
+<li class="mb-2 text-muted">✖ Product variants</li>
 <li class="mb-2 text-muted">✖ Accent color customization</li>
 <li class="mb-2 text-muted">✖ Cart icon placement options</li>
-<li class="mb-2 text-muted">✖ Single product pages</li>
-<li class="mb-2 text-muted">✖ Category pages</li>
 <li class="mb-2 text-muted">✖ Dynamic Pricing</li>
 </ul>
 
-<a href="../affilicart-light.zip" class="btn btn-outline-dark w-100">Download Free</a>
+<a id="downloadFreeBtn" href="../affilicart-light.zip" class="btn btn-outline-dark w-100">Download Free</a>
 
 </div>
 </div>
@@ -278,6 +279,7 @@ $49.99
 <li class="mb-2"><span class="check">✔</span> Accent color customization</li>
 <li class="mb-2"><span class="check">✔</span> Cart icon placement options</li>
 <li class="mb-2"><span class="check">✔</span> Single product pages</li>
+<li class="mb-2"><span class="check">✔</span> Product variants</li>
 <li class="mb-2"><span class="check">✔</span> Category pages</li>
 <li class="mb-2"><span class="check">✔</span> Dynamic Pricing <span style="font-size: 0.85rem; color: #94a3b8;">(coming soon)</span></li>
 </ul>
@@ -437,5 +439,185 @@ updateSavingsMessage(); // Initialize on page load
     });
 </script>
 
-</body>
-</html>
+<!-- EMAIL CAPTURE MODAL -->
+<style>
+  #downloadLinkContainer a:hover {
+    background-color: var(--primary) !important;
+    color: white !important;
+  }
+</style>
+<div id="emailCaptureModal" style="display: none !important; background: rgba(0,0,0,0.5); position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: 1050;">
+  <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); background: white; border-radius: 8px; box-shadow: 0 4px 20px rgba(0,0,0,0.15); max-width: 400px; width: 90%; padding: 30px;">
+    <button id="closeEmailModal" type="button" class="btn-close" style="position: absolute; top: 15px; right: 15px; background: none; border: none; font-size: 28px; cursor: pointer;">&times;</button>
+    
+    <h5 style="font-weight: 700; margin-bottom: 10px; margin-top: 0;">Get AffiliCart Light for Free</h5>
+    <p style="color: #64748b; font-size: 0.95rem; margin-bottom: 20px;">Enter your email to download now.</p>
+    
+    <div id="alertContainer"></div>
+    
+    <form id="emailCaptureForm" style="margin-bottom: 15px;">
+      <div class="form-group" style="margin-bottom: 15px;">
+        <label for="emailInput" style="display: block; margin-bottom: 6px; font-weight: 500; font-size: 0.9rem;">Email Address</label>
+        <input type="text" class="form-control" id="emailInput" placeholder="you@example.com" style="padding: 10px; border: 1px solid #cbd5e1; border-radius: 6px; font-size: 0.95rem;" required>
+      </div>
+      
+      <button type="submit" id="submitEmailBtn" class="btn btn-primary-custom w-100" style="margin-bottom: 10px;">Get Download Link</button>
+    </form>
+    
+    <div id="spinnerContainer" style="display: none; text-align: center; padding: 20px;">
+      <div class="spinner-border" role="status" style="color: var(--primary); margin-bottom: 10px;">
+        <span class="visually-hidden">Loading...</span>
+      </div>
+      <p style="font-size: 0.9rem; color: #64748b;">Processing your request...</p>
+    </div>
+    
+    <div id="downloadLinkContainer" style="display: none;">
+      <a href="affilicart-light.zip" class="btn w-100" download style="border: 2px solid var(--primary); color: var(--primary); background: transparent; font-weight: 600; transition: all 0.2s ease;">📥 Download affilicart-light.zip</a>
+    </div>
+  </div>
+</div>
+
+<script>
+// Email capture form handling
+const downloadBtn = document.getElementById('downloadFreeBtn');
+const emailModal = document.getElementById('emailCaptureModal');
+const emailForm = document.getElementById('emailCaptureForm');
+const emailInput = document.getElementById('emailInput');
+const alertContainer = document.getElementById('alertContainer');
+const submitBtn = document.getElementById('submitEmailBtn');
+const spinnerContainer = document.getElementById('spinnerContainer');
+const downloadLinkContainer = document.getElementById('downloadLinkContainer');
+const closeModal = document.getElementById('closeEmailModal');
+
+// Track session submission (resets on page refresh)
+let emailSubmittedThisSession = false;
+
+// Check if email has already been submitted in this session
+function checkSubmissionStatus() {
+  if (emailSubmittedThisSession === true) {
+    downloadLinkContainer.style.display = 'block';
+    submitBtn.disabled = true;
+    submitBtn.textContent = 'Email submitted!';
+    emailInput.disabled = true;
+  }
+}
+
+// Initialize on page load
+checkSubmissionStatus();
+
+// Replace download button with modal trigger
+if (downloadBtn) {
+  downloadBtn.addEventListener('click', function(e) {
+    e.preventDefault();
+    emailModal.style.display = 'block';
+    // Only reset if not already submitted in this session
+    if (emailSubmittedThisSession === false) {
+      resetForm();
+    }
+    emailInput.focus();
+  });
+}
+
+// Close modal
+if (closeModal) {
+  closeModal.addEventListener('click', function() {
+    emailModal.style.display = 'none';
+  });
+}
+
+window.addEventListener('click', function(e) {
+  if (e.target === emailModal) {
+    emailModal.style.display = 'none';
+  }
+});
+
+// Form submission
+if (emailForm) {
+  emailForm.addEventListener('submit', function(e) {
+    e.preventDefault();
+    
+    const email = emailInput.value.trim();
+    
+    // Reset alerts
+    alertContainer.innerHTML = '';
+    
+    // Validate email
+    if (!email) {
+      showAlert('Please enter an email address', 'danger');
+      submitBtn.disabled = false;
+      return;
+    }
+    
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(email)) {
+      showAlert('Please enter a valid email address', 'danger');
+      submitBtn.disabled = false;
+      return;
+    }
+    
+    // Show spinner
+    spinnerContainer.style.display = 'block';
+    submitBtn.disabled = true;
+    
+    // Submit to Google Form
+    const FORM_ID = '1FAIpQLSeju89HaOxQxkb9CvIvR9ugyqIqFmUx9NftF5dtUIh7X00CxQ';
+    const FORM_ENDPOINT = `https://docs.google.com/forms/d/e/${FORM_ID}/formResponse`;
+    
+    // Submit email to Google Form
+    const formData = new FormData();
+    formData.append('entry.381056666', email);
+    
+    fetch(FORM_ENDPOINT, {
+      method: 'POST',
+      body: formData,
+      mode: 'no-cors'
+    })
+    .then(() => {
+      // Mark as submitted in this session
+      emailSubmittedThisSession = true;
+      
+      // Show success and download link
+      spinnerContainer.style.display = 'none';
+      downloadLinkContainer.style.display = 'block';
+      submitBtn.disabled = true;
+      submitBtn.textContent = 'Email submitted!';
+      emailInput.disabled = true;
+    })
+    .catch((error) => {
+      spinnerContainer.style.display = 'none';
+      submitBtn.disabled = false;
+      showAlert('Error submitting form. Please try again.', 'danger');
+      console.error('Form submission error:', error);
+    });
+  });
+}
+
+function showAlert(message, type) {
+  const alertDiv = document.createElement('div');
+  alertDiv.className = `alert alert-${type} alert-dismissible fade show`;
+  alertDiv.setAttribute('role', 'alert');
+  alertDiv.style.marginBottom = '15px';
+  alertDiv.innerHTML = `
+    ${message}
+    <button type="button" class="btn-close" aria-label="Close"></button>
+  `;
+  
+  // Add click handler for close button
+  const closeBtn = alertDiv.querySelector('.btn-close');
+  closeBtn.addEventListener('click', function() {
+    alertDiv.remove();
+  });
+  
+  alertContainer.appendChild(alertDiv);
+}
+
+function resetForm() {
+  if (emailForm) emailForm.reset();
+  alertContainer.innerHTML = '';
+  spinnerContainer.style.display = 'none';
+  downloadLinkContainer.style.display = 'none';
+  submitBtn.disabled = false;
+  submitBtn.textContent = 'Get Download Link';
+  emailInput.disabled = false;
+}
+</script>
