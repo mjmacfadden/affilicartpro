@@ -1,6 +1,6 @@
 # AffiliCart Blog Structure & Guidelines
 
-This blog is a pure HTML/CSS implementation designed for lightweight performance and easy maintenance. This guide explains how the blog works and how to add new content.
+This blog is a pure HTML/CSS implementation designed for lightweight performance and easy maintenance. All blog styling is consolidated in the root `/styles.css` file. This guide explains how the blog works and how to add new content.
 
 ## Directory Structure
 
@@ -99,11 +99,12 @@ Posts must belong to ONE of these categories:
    <div class="blog-card">
      <div class="blog-date">X min read</div>
      <h3 class="blog-title"><a href="../../your-post-slug.html">Your Post Title</a></h3>
-     <span class="blog-category">Category Name</span>
+     <a href="./" class="blog-category">Category Name</a>
      <p class="blog-excerpt">Brief excerpt</p>
    </div>
    </div>
    ```
+   ⚠️ **Note:** On category pages, the category badge is a link back to the current category page (`href="./"`)
 4. Category pages show ALL posts in that category
 
 ### Step 5: Update Related Posts Links
