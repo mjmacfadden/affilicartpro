@@ -6,9 +6,7 @@ This blog is a pure HTML/CSS implementation designed for lightweight performance
 
 ```
 /blog/
-  index.html                          # Main blog listing (shows first 10 posts chronologically)
-  archive/
-    index.html                        # Full archive of all blog posts
+  index.html                          # Main blog listing
   category/
     /getting-started/
       index.html                      # All "Getting Started" posts
@@ -55,9 +53,9 @@ This blog is a pure HTML/CSS implementation designed for lightweight performance
    
    <!-- Blog header -->
    <h1>Your Post Title</h1>
+   <a href="category/category-slug/" class="blog-category">Category Name</a>
    <div class="blog-meta-info">
      <span>⏱️ X min read</span>
-     <span>✍️ AffiliCart</span>
    </div>
    
    <!-- Content sections - use h2 for main sections, h3 for subsections -->
@@ -83,15 +81,13 @@ Posts must belong to ONE of these categories:
    ```html
    <div class="col-md-6 col-lg-4">
    <div class="blog-card">
-     <a href="category/your-category/" class="blog-category">Category Name</a>
      <div class="blog-date">X min read</div>
      <h3 class="blog-title"><a href="your-post-slug.html">Your Post Title</a></h3>
+     <a href="category/your-category/" class="blog-category">Category Name</a>
      <p class="blog-excerpt">Brief 1-2 sentence excerpt from the post</p>
-     <div class="blog-meta">By AffiliCart</div>
    </div>
    </div>
    ```
-3. **Important:** Only keep the most recent 10 posts visible on the main index. If adding a new post pushes the count to 11, move the oldest post card to the Archive page (see below).
 
 ### Step 4: Update the Category Page
 
@@ -101,39 +97,21 @@ Posts must belong to ONE of these categories:
    ```html
    <div class="col-md-6 col-lg-4">
    <div class="blog-card">
-     <a href="../" class="blog-category">Category Name</a>
      <div class="blog-date">X min read</div>
-     <h3 class="blog-title"><a href="../your-post-slug.html">Your Post Title</a></h3>
+     <h3 class="blog-title"><a href="../../your-post-slug.html">Your Post Title</a></h3>
+     <span class="blog-category">Category Name</span>
      <p class="blog-excerpt">Brief excerpt</p>
-     <div class="blog-meta">By AffiliCart</div>
    </div>
    </div>
    ```
-4. Category pages show ALL posts in that category (no pagination needed)
+4. Category pages show ALL posts in that category
 
-### Step 5: Update the Archive Page
-
-1. Open `/blog/archive/index.html`
-2. Add your new post card to the top of the archive:
-   ```html
-   <div class="col-md-6 col-lg-4">
-   <div class="blog-card">
-     <a href="category/your-category/" class="blog-category">Category Name</a>
-     <div class="blog-date">X min read</div>
-     <h3 class="blog-title"><a href="your-post-slug.html">Your Post Title</a></h3>
-     <p class="blog-excerpt">Brief excerpt</p>
-     <div class="blog-meta">By AffiliCart</div>
-   </div>
-   </div>
-   ```
-3. **Tip:** Archive shows posts in reverse chronological order (newest first)
-
-### Step 6: Update Related Posts Links
+### Step 5: Update Related Posts Links
 
 In your new post's HTML file, add links to 2-3 related existing posts:
 ```html
 <div class="related-posts">
-  <h3>Read Next</h3>
+  <h3>Read More</h3>
   <a href="other-post-slug.html" class="related-post-link">Related Post Title →</a>
   <a href="another-post-slug.html" class="related-post-link">Another Related Post →</a>
 </div>
@@ -141,7 +119,7 @@ In your new post's HTML file, add links to 2-3 related existing posts:
 
 Also, update existing related posts sections to link back to your new post where appropriate.
 
-### Step 7: Update sitemap.xml
+### Step 6: Update sitemap.xml
 
 Add your new post to `/sitemap.xml`:
 ```xml
@@ -153,40 +131,12 @@ Add your new post to `/sitemap.xml`:
 </url>
 ```
 
-## Pagination Strategy for Scale
+## Future Scaling: Archive & Pagination
 
-### Current Setup (4 posts)
-- Main blog index: Shows all posts
-- Category pages: Show all posts per category
-- Archive: Not yet needed
-
-### Future Setup (10+ posts, anticipating 100s)
-
-**Main Blog Index:**
-- Shows only the first 10 most recent posts
-- Includes a "View Full Archive" button/link to `/blog/archive/`
-- Keeps homepage fresh and focused on latest content
-
-**Archive Page (`/blog/archive/index.html`):**
-- Shows ALL blog posts chronologically (newest first)
-- Uses pagination via separate files:
-  - `/blog/archive/index.html` - Posts 1-10
-  - `/blog/archive/page/2/index.html` - Posts 11-20
-  - `/blog/archive/page/3/index.html` - Posts 21-30
-  - etc.
-- Each archive page includes "Previous" / "Next" navigation
-
-**Category Pages:**
-- Show all posts in category (no pagination needed initially)
-- If a category grows beyond ~30 posts, can add pagination later
-
-**Why this approach?**
-- Pure HTML (no JavaScript/database needed)
-- Fast loading
-- SEO-friendly (each post has unique, discoverable URL)
-- Easy to maintain manually
-- Scales to hundreds of posts with minimal overhead
-- Clear visual hierarchy: Latest → Categories → Full Archive
+When the blog grows to 50+ posts, consider implementing:
+- Archive page with pagination (`/blog/archive/`, `/blog/archive/page/2/`, etc.)
+- "View All Posts" button on main index
+- Previous/Next navigation on archive pages
 
 ## Post Content Guidelines
 
@@ -244,7 +194,6 @@ Add your new post to `/sitemap.xml`:
 - [ ] Category link works (links to category page)
 - [ ] Post appears in blog/index.html
 - [ ] Post appears in correct category page
-- [ ] Post appears in blog/archive/index.html
 - [ ] sitemap.xml includes new post URL
 - [ ] Title is under 60 characters
 - [ ] Meta description is 150-160 characters
@@ -256,8 +205,7 @@ Add your new post to `/sitemap.xml`:
 
 | Page | File Path | Purpose |
 |------|-----------|---------|
-| Main Blog | `/blog/index.html` | Lists newest 10 posts |
-| Full Archive | `/blog/archive/index.html` | All posts (paginated later) |
+| Main Blog | `/blog/index.html` | Lists all current posts |
 | Getting Started | `/blog/category/getting-started/index.html` | All intro posts |
 | Tutorials | `/blog/category/tutorials/index.html` | All tutorial posts |
 | Strategy | `/blog/category/strategy/index.html` | All strategy posts |
