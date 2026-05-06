@@ -122,12 +122,24 @@ Also, update existing related posts sections to link back to your new post where
 
 ### Step 6: Update sitemap.xml
 
-Add your new post to `/sitemap.xml`:
+Add your new post to `/sitemap.xml` in the root directory:
 ```xml
 <url>
   <loc>https://affilicartpro.com/blog/your-post-slug.html</loc>
   <lastmod>2026-05-XX</lastmod>
   <changefreq>monthly</changefreq>
+  <priority>0.7</priority>
+</url>
+```
+
+**Note:** Update the date to match your publish date (YYYY-MM-DD format).
+
+If you created a new category, also add the category page to the sitemap:
+```xml
+<url>
+  <loc>https://affilicartpro.com/blog/category/your-category/</loc>
+  <lastmod>2026-05-XX</lastmod>
+  <changefreq>weekly</changefreq>
   <priority>0.7</priority>
 </url>
 ```
