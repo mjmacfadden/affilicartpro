@@ -235,8 +235,19 @@ An RSS feed is available at `/blog/feed.xml` for blog subscribers.
   <description>150-160 character meta description here</description>
   <category>Your Category Name</category>
   <author>AffiliCart</author>
+  <content:encoded><![CDATA[
+<h2>Section Title</h2>
+<p>Full article HTML content goes here...</p>
+<p>Copy the content from your blog post's main article section.</p>
+  ]]></content:encoded>
 </item>
 ```
+
+**For the `<content:encoded>` section:**
+- Copy the HTML from your blog post (all the `<h2>`, `<p>`, `<ul>`, etc. tags between the `<div class="container">` and `</div>`)
+- Wrap it in `<![CDATA[` and `]]>` to preserve the HTML formatting
+- This is what RSS readers will display as the full article
+- Include all paragraphs, lists, links, and formatting
 
 **Date format examples:**
 - Mon, 06 May 2026 00:00:00 GMT
