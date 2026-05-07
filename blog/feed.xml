@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+<rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/">
   <channel>
     <title>AffiliCart Blog</title>
     <link>https://affilicartpro.com/blog/</link>
     <description>Tips, guides, and tutorials for Amazon Associates using WordPress.</description>
     <language>en-us</language>
-    <lastBuildDate>2026-05-07T00:00:00Z</lastBuildDate>
+    <lastBuildDate>Wed, 07 May 2026 00:00:00 GMT</lastBuildDate>
+    <atom:link href="https://affilicartpro.com/blog/feed.xml" rel="self" type="application/rss+xml" />
     <ttl>3600</ttl>
     <image>
       <url>https://affilicartpro.com/img/hero-image-2.jpg</url>
@@ -20,7 +21,8 @@
       <pubDate>Mon, 06 May 2026 00:00:00 GMT</pubDate>
       <description>What started as a tool for my entrepreneurship students at trypursueit.com became a full WordPress plugin for Amazon Associates. Here's how a classroom need turned into AffiliCart.</description>
       <category>Behind the Scenes</category>
-      <author>AffiliCart</author>
+      <author>affilicart@affilicartpro.com</author>
+      <media:thumbnail url="https://affilicartpro.com/blog/img/class-project-to-product.png" />
       <image>
         <url>https://affilicartpro.com/blog/img/class-project-to-product.png</url>
         <title>From Classroom Project to Real Product: The Origin Story of AffiliCart</title>
@@ -82,17 +84,13 @@
 
     <item>
       <title>The Chicken-and-Egg Problem Every New Amazon Associate Faces (And How AffiliCart Solves It)</title>
-      <link>https://affilicartpro
-      <image>
-        <url>https://affilicartpro.com/img/chicken-and-egg.jpg</url>
-        <title>The Chicken-and-Egg Problem Every New Amazon Associate Faces (And How AffiliCart Solves It)</title>
-        <link>https://affilicartpro.com/blog/chicken-egg-problem-amazon-associates.html</link>
-      </image>.com/blog/chicken-egg-problem-amazon-associates.html</link>
+      <link>https://affilicartpro.com/blog/chicken-egg-problem-amazon-associates.html</link>
       <guid>https://affilicartpro.com/blog/chicken-egg-problem-amazon-associates.html</guid>
       <pubDate>Mon, 06 May 2026 00:00:00 GMT</pubDate>
       <description>Amazon requires 10 sales before granting API access, but you need better tools to make those sales. Discover how AffiliCart bypasses this problem and delivers a polished shopping experience from day one.</description>
       <category>Getting Started</category>
-      <author>AffiliCart</author>
+      <author>affilicart@affilicartpro.com</author>
+      <media:thumbnail url="https://affilicartpro.com/img/chicken-and-egg.jpg" />
       <content:encoded><![CDATA[
 <h2>The Frustrating Reality New Amazon Associates Quickly Discover</h2>
 <p>You sign up for Amazon Associates, create solid content, and start recommending products. Things are moving along… until you want to offer a better experience for your readers.</p>
@@ -138,7 +136,8 @@ No API access? Much harder to create the kind of polished experience that drives
       <pubDate>Mon, 05 May 2026 00:00:00 GMT</pubDate>
       <description>Stop sending readers to Amazon too early. Learn how on-site product variants for size, color, and fit boost conversions, lower bounce rates, and increase affiliate commissions.</description>
       <category>Strategy</category>
-      <author>AffiliCart</author>
+      <author>affilicart@affilicartpro.com</author>
+      <media:thumbnail url="https://affilicartpro.com/blog/img/variants.gif" />
       <image>
         <url>https://affilicartpro.com/blog/img/variants.gif</url>
         <title>How AffiliCart Variants Boost Conversions and Cut Bounce Rates</title>
@@ -199,7 +198,7 @@ No API access? Much harder to create the kind of polished experience that drives
 <p>Your job is to inspire and recommend trusted products. Amazon's job is fulfillment. AffiliCart bridges the gap by letting readers make confident decisions on your site, where your advice carries the most weight.</p>
 <p>You already do the hard work of curating great products. AffiliCart Pro simply lets you present them in the most shopper-friendly way possible.</p>
 <p><strong>Ready to let your readers shop smarter?</strong></p>
-<p><a href="../index.html#pricing" class="btn btn-primary-custom" style="display: inline-block; text-decoration: none; margin-bottom: 10px;">Download AffiliCart Light for Free →</a> and upgrade to Pro to unlock powerful on-site size variants.</p>
+<p><a href="https://affilicartpro.com/index.html#pricing" class="btn btn-primary-custom" style="display: inline-block; text-decoration: none; margin-bottom: 10px;">Download AffiliCart Light for Free →</a> and upgrade to Pro to unlock powerful on-site size variants.</p>
 <p>Your next affiliate payout will thank you.</p>
       ]]></content:encoded>
     </item>
@@ -211,7 +210,8 @@ No API access? Much harder to create the kind of polished experience that drives
       <pubDate>Mon, 03 May 2026 00:00:00 GMT</pubDate>
       <description>Fashion readers click one clothing link and disappear. Learn how reducing bounce rate with an on-site Amazon shopping cart lets visitors build complete outfits, pick their exact sizes, and buy more — boosting your affiliate commissions.</description>
       <category>Strategy</category>
-      <author>AffiliCart</author>
+      <author>affilicart@affilicartpro.com</author>
+      <media:thumbnail url="https://affilicartpro.com/img/hero-image-2.jpg" />
       <image>
         <url>https://affilicartpro.com/img/hero-image-2.jpg</url>
         <title>Why Your Fashion Blog Is Losing Money on Every Outfit Post (And How to Fix It)</title>
@@ -275,7 +275,7 @@ No API access? Much harder to create the kind of polished experience that drives
 <p>Your audience wants to shop the complete looks you create. They want to pick their sizes, mix and match pieces, and check out once — all while staying on your site.</p>
 <p>AffiliCart makes that easy and natural.</p>
 <p>You're already doing the hard work of creating beautiful content and styling outfits. Now give your readers the smooth shopping experience they actually want.</p>
-<p><a href="../index.html#pricing" class="btn btn-primary-custom" style="display: inline-block; text-decoration: none;">Install AffiliCart Today →</a></p>
+<p><a href="https://affilicartpro.com/index.html#pricing" class="btn btn-primary-custom" style="display: inline-block; text-decoration: none;">Install AffiliCart Today →</a></p>
 <p>Your affiliate reports will thank you.</p>
       ]]></content:encoded>
     </item>
@@ -287,7 +287,8 @@ No API access? Much harder to create the kind of polished experience that drives
       <pubDate>Thu, 02 May 2026 00:00:00 GMT</pubDate>
       <description>Learn how the AffiliCart shopping cart feature lets Amazon Associates display multiple products and send readers to a single Amazon checkout. Real reasons it increases average order value.</description>
       <category>Strategy</category>
-      <author>AffiliCart</author>
+      <author>affilicart@affilicartpro.com</author>
+      <media:thumbnail url="https://affilicartpro.com/img/hero-image-2.jpg" />
       <image>
         <url>https://affilicartpro.com/img/hero-image-2.jpg</url>
         <title>Boost Amazon Affiliate Commissions with Multi-Product Carts</title>
@@ -329,7 +330,7 @@ No API access? Much harder to create the kind of polished experience that drives
 
 <h2>Start Increasing Commissions Today</h2>
 <p>Ready to turn every blog post into a mini Amazon storefront? Install AffiliCart and watch your affiliate dashboard grow.</p>
-<p><a href="../index.html#pricing" class="btn btn-primary-custom" style="display: inline-block; text-decoration: none;">Try AffiliCart Now →</a></p>
+<p><a href="https://affilicartpro.com/index.html#pricing" class="btn btn-primary-custom" style="display: inline-block; text-decoration: none;">Try AffiliCart Now →</a></p>
       ]]></content:encoded>
     </item>
 
@@ -340,7 +341,8 @@ No API access? Much harder to create the kind of polished experience that drives
       <pubDate>Sun, 05 May 2026 00:00:00 GMT</pubDate>
       <description>Try AffiliCart Light completely free. Add a real shopping cart to your Amazon Associates site, let readers add multiple products, and send them to Amazon checkout with your affiliate tag. No credit card required — start earning more today.</description>
       <category>Getting Started</category>
-      <author>AffiliCart</author>
+      <author>affilicart@affilicartpro.com</author>
+      <media:thumbnail url="https://affilicartpro.com/img/hero-image-2.jpg" />
       <image>
         <url>https://affilicartpro.com/img/hero-image-2.jpg</url>
         <title>AffiliCart Light: The Powerful Free Amazon Affiliate Cart Plugin for WordPress</title>
@@ -396,7 +398,7 @@ No API access? Much harder to create the kind of polished experience that drives
 
 <h2>Ready to Turn Your Blog into an Amazon Shopping Experience?</h2>
 <p>Stop sending readers away after just one product. Give them the ability to browse, add multiple items, and checkout smoothly — all while staying on your site.</p>
-<p><a href="../index.html#pricing" class="btn btn-primary-custom" style="display: inline-block; text-decoration: none;">Install AffiliCart Light for Free Now →</a></p>
+<p><a href="https://affilicartpro.com/index.html#pricing" class="btn btn-primary-custom" style="display: inline-block; text-decoration: none;">Install AffiliCart Light for Free Now →</a></p>
 <p>Once you see how much better your affiliate conversions feel with a real cart, you'll wonder why you waited.</p>
 <p>Have questions about the free version or want to know if Pro makes sense for your site? We're here to help.</p>
       ]]></content:encoded>
@@ -409,7 +411,8 @@ No API access? Much harder to create the kind of polished experience that drives
       <pubDate>Sun, 05 May 2026 00:00:00 GMT</pubDate>
       <description>Discover how the AffiliCart WordPress plugin lets Amazon Associates add a full shopping cart to their site. Add multiple products, reduce bounce rates, and send readers to Amazon checkout in one click.</description>
       <category>Getting Started</category>
-      <author>AffiliCart</author>
+      <author>affilicart@affilicartpro.com</author>
+      <media:thumbnail url="https://affilicartpro.com/img/hero-image-2.jpg" />
       <image>
         <url>https://affilicartpro.com/img/hero-image-2.jpg</url>
         <title>How AffiliCart Turns Your WordPress Blog into a Real Amazon Affiliate Shopping Experience</title>
@@ -446,7 +449,7 @@ No API access? Much harder to create the kind of polished experience that drives
 
 <h2>Conclusion</h2>
 <p>Stop sending readers away after one purchase. Give them the full shopping-cart experience they expect from modern e-commerce—while keeping every sale tracked to your Amazon Associates account.</p>
-<p><a href="../index.html#pricing" class="btn btn-primary-custom" style="display: inline-block; text-decoration: none;">Ready? Install AffiliCart Today</a></p>
+<p><a href="https://affilicartpro.com/index.html#pricing" class="btn btn-primary-custom" style="display: inline-block; text-decoration: none;">Ready? Install AffiliCart Today</a></p>
       ]]></content:encoded>
     </item>
 
@@ -457,7 +460,8 @@ No API access? Much harder to create the kind of polished experience that drives
       <pubDate>Sun, 05 May 2026 00:00:00 GMT</pubDate>
       <description>Complete installation and setup guide for the AffiliCart WordPress plugin. Learn how to add your Amazon affiliate tag, create products, and display your first cart in minutes.</description>
       <category>Tutorials</category>
-      <author>AffiliCart</author>
+      <author>affilicart@affilicartpro.com</author>
+      <media:thumbnail url="https://affilicartpro.com/img/hero-image-2.jpg" />
       <image>
         <url>https://affilicartpro.com/img/hero-image-2.jpg</url>
         <title>Step-by-Step: How to Install and Set Up AffiliCart on Your WordPress Site (Beginner-Friendly)</title>
@@ -520,7 +524,7 @@ No API access? Much harder to create the kind of polished experience that drives
 
 <h2>You're Live!</h2>
 <p>Your readers can now browse products, add multiple items, and checkout on Amazon with your affiliate tag attached automatically.</p>
-<p><a href="../index.html#pricing" class="btn btn-primary-custom" style="display: inline-block; text-decoration: none;">Get Started with AffiliCart →</a></p>
+<p><a href="https://affilicartpro.com/index.html#pricing" class="btn btn-primary-custom" style="display: inline-block; text-decoration: none;">Get Started with AffiliCart →</a></p>
       ]]></content:encoded>
     </item>
 
@@ -531,7 +535,8 @@ No API access? Much harder to create the kind of polished experience that drives
       <pubDate>Sun, 05 May 2026 00:00:00 GMT</pubDate>
       <description>Speed up adding products to AffiliCart with the free ASIN Copier Chrome extension. Works on 10 Amazon country stores, 100% private, no data collection. Perfect for busy Amazon Associates.</description>
       <category>Tools</category>
-      <author>AffiliCart</author>
+      <author>affilicart@affilicartpro.com</author>
+      <media:thumbnail url="https://affilicartpro.com/img/hero-image-2.jpg" />
       <image>
         <url>https://affilicartpro.com/img/hero-image-2.jpg</url>
         <title>Free Tool Alert: How the AffiliCart ASIN Copier Chrome Extension Saves Hours of Amazon Product Research</title>
@@ -581,7 +586,7 @@ No API access? Much harder to create the kind of polished experience that drives
 
 <h2>Conclusion</h2>
 <p>The AffiliCart ASIN Copier + the main plugin is the fastest way to build rich, high-converting Amazon affiliate content in 2026.</p>
-<p><a href="../index.html#pricing" class="btn btn-primary-custom" style="display: inline-block; text-decoration: none;">Install AffiliCart & Get Started →</a></p>
+<p><a href="https://affilicartpro.com/index.html#pricing" class="btn btn-primary-custom" style="display: inline-block; text-decoration: none;">Install AffiliCart & Get Started →</a></p>
       ]]></content:encoded>
     </item>
 
