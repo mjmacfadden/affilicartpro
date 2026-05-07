@@ -235,6 +235,11 @@ An RSS feed is available at `/blog/feed.xml` for blog subscribers.
   <description>150-160 character meta description here</description>
   <category>Your Category Name</category>
   <author>AffiliCart</author>
+  <image>
+    <url>https://affilicartpro.com/img/your-og-image.jpg</url>
+    <title>Your Post Title</title>
+    <link>https://affilicartpro.com/blog/your-post-slug.html</link>
+  </image>
   <content:encoded><![CDATA[
 <h2>Section Title</h2>
 <p>Full article HTML content goes here...</p>
@@ -242,6 +247,11 @@ An RSS feed is available at `/blog/feed.xml` for blog subscribers.
   ]]></content:encoded>
 </item>
 ```
+
+**For the `<image>` section:**
+- Use the same OG image URL from your blog post's `<meta property="og:image">` tag
+- This ensures the RSS feed displays the article-specific thumbnail instead of the default site image
+- Format: `https://affilicartpro.com/img/your-image-name.jpg` or `.gif`
 
 **For the `<content:encoded>` section:**
 - Copy the HTML from your blog post (all the `<h2>`, `<p>`, `<ul>`, etc. tags between the `<div class="container">` and `</div>`)
@@ -254,6 +264,7 @@ An RSS feed is available at `/blog/feed.xml` for blog subscribers.
 - Tue, 07 May 2026 14:30:00 GMT
 
 **Tips:**
+- Include the `<image>` tag with your post's OG image URL for better feed reader presentation
 - Use the same description as your post's meta description tag
 - Use the actual publish date/time for `<pubDate>`
 - Paste new items **before** existing items so newest appears first
