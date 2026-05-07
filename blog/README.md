@@ -216,6 +216,38 @@ When the blog grows to 50+ posts, consider implementing:
 - [ ] No broken internal links
 - [ ] Mobile responsive (test on phone/tablet)
 
+## Maintaining the RSS Feed
+
+An RSS feed is available at `/blog/feed.xml` for blog subscribers.
+
+**Every time you add a new blog post, add an entry to the RSS feed:**
+
+1. Open `/blog/feed.xml`
+2. Update the `<lastBuildDate>` to today's date (format: `YYYY-MM-DDTHH:MM:SSZ`)
+3. Add a new `<item>` block at the **top** of the items list (newest posts first):
+
+```xml
+<item>
+  <title>Your Post Title</title>
+  <link>https://affilicartpro.com/blog/your-post-slug.html</link>
+  <guid>https://affilicartpro.com/blog/your-post-slug.html</guid>
+  <pubDate>Day, DD Mon YYYY HH:MM:SS GMT</pubDate>
+  <description>150-160 character meta description here</description>
+  <category>Your Category Name</category>
+  <author>AffiliCart</author>
+</item>
+```
+
+**Date format examples:**
+- Mon, 06 May 2026 00:00:00 GMT
+- Tue, 07 May 2026 14:30:00 GMT
+
+**Tips:**
+- Use the same description as your post's meta description tag
+- Use the actual publish date/time for `<pubDate>`
+- Paste new items **before** existing items so newest appears first
+- Keep entries sorted by date (newest at top)
+
 ## Quick Reference: File Locations
 
 | Page | File Path | Purpose |

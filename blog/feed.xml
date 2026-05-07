@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>AffiliCart Blog</title>
+    <link>https://affilicartpro.com/blog/</link>
+    <description>Tips, guides, and tutorials for Amazon Associates using WordPress.</description>
+    <language>en-us</language>
+    <lastBuildDate>2026-05-07T00:00:00Z</lastBuildDate>
+    <ttl>3600</ttl>
+    <image>
+      <url>https://affilicartpro.com/img/hero-image-2.jpg</url>
+      <title>AffiliCart Blog</title>
+      <link>https://affilicartpro.com/blog/</link>
+    </image>
+
+    <item>
+      <title>From Classroom Project to Real Product: The Origin Story of AffiliCart</title>
+      <link>https://affilicartpro.com/blog/affilicart-origin-story.html</link>
+      <guid>https://affilicartpro.com/blog/affilicart-origin-story.html</guid>
+      <pubDate>Mon, 06 May 2026 00:00:00 GMT</pubDate>
+      <description>What started as a tool for my entrepreneurship students at trypursueit.com became a full WordPress plugin for Amazon Associates. Here's how a classroom need turned into AffiliCart.</description>
+      <category>Behind the Scenes</category>
+      <author>AffiliCart</author>
+    </item>
+
+    <item>
+      <title>How AffiliCart Variants Boost Conversions and Cut Bounce Rates</title>
+      <link>https://affilicartpro.com/blog/affilicart-variants-boost-conversions.html</link>
+      <guid>https://affilicartpro.com/blog/affilicart-variants-boost-conversions.html</guid>
+      <pubDate>Mon, 05 May 2026 00:00:00 GMT</pubDate>
+      <description>Stop sending readers to Amazon too early. Learn how on-site product variants for size, color, and fit boost conversions, lower bounce rates, and increase affiliate commissions.</description>
+      <category>Strategy</category>
+      <author>AffiliCart</author>
+    </item>
+
+    <item>
+      <title>Why Your Fashion Blog Is Losing Money on Every Outfit Post (And How to Fix It)</title>
+      <link>https://affilicartpro.com/blog/fashion-blog-bounce-rate-fix.html</link>
+      <guid>https://affilicartpro.com/blog/fashion-blog-bounce-rate-fix.html</guid>
+      <pubDate>Mon, 03 May 2026 00:00:00 GMT</pubDate>
+      <description>Fashion readers click one clothing link and disappear. Learn how reducing bounce rate with an on-site Amazon shopping cart lets visitors build complete outfits, pick their exact sizes, and buy more — boosting your affiliate commissions.</description>
+      <category>Strategy</category>
+      <author>AffiliCart</author>
+    </item>
+
+    <item>
+      <title>Boost Amazon Affiliate Commissions with Multi-Product Carts</title>
+      <link>https://affilicartpro.com/blog/boost-amazon-affiliate-commissions.html</link>
+      <guid>https://affilicartpro.com/blog/boost-amazon-affiliate-commissions.html</guid>
+      <pubDate>Thu, 02 May 2026 00:00:00 GMT</pubDate>
+      <description>Learn how the AffiliCart shopping cart feature lets Amazon Associates display multiple products and send readers to a single Amazon checkout. Real reasons it increases average order value.</description>
+      <category>Strategy</category>
+      <author>AffiliCart</author>
+    </item>
+
+    <item>
+      <title>AffiliCart Light: The Powerful Free Amazon Affiliate Cart Plugin for WordPress</title>
+      <link>https://affilicartpro.com/blog/affilicart-light-free-plugin.html</link>
+      <guid>https://affilicartpro.com/blog/affilicart-light-free-plugin.html</guid>
+      <pubDate>Sun, 05 May 2026 00:00:00 GMT</pubDate>
+      <description>Try AffiliCart Light completely free. Add a real shopping cart to your Amazon Associates site, let readers add multiple products, and send them to Amazon checkout with your affiliate tag. No credit card required — start earning more today.</description>
+      <category>Getting Started</category>
+      <author>AffiliCart</author>
+    </item>
+
+    <item>
+      <title>How AffiliCart Turns Your WordPress Blog into a Real Amazon Affiliate Shopping Experience</title>
+      <link>https://affilicartpro.com/blog/how-affilicart-turns-wordpress-blog.html</link>
+      <guid>https://affilicartpro.com/blog/how-affilicart-turns-wordpress-blog.html</guid>
+      <pubDate>Sun, 05 May 2026 00:00:00 GMT</pubDate>
+      <description>Discover how the AffiliCart WordPress plugin lets Amazon Associates add a full shopping cart to their site. Add multiple products, reduce bounce rates, and send readers to Amazon checkout in one click.</description>
+      <category>Getting Started</category>
+      <author>AffiliCart</author>
+    </item>
+
+    <item>
+      <title>Step-by-Step: How to Install and Set Up AffiliCart on Your WordPress Site (Beginner-Friendly)</title>
+      <link>https://affilicartpro.com/blog/step-by-step-installation-guide.html</link>
+      <guid>https://affilicartpro.com/blog/step-by-step-installation-guide.html</guid>
+      <pubDate>Sun, 05 May 2026 00:00:00 GMT</pubDate>
+      <description>Complete installation and setup guide for the AffiliCart WordPress plugin. Learn how to add your Amazon affiliate tag, create products, and display your first cart in minutes.</description>
+      <category>Tutorials</category>
+      <author>AffiliCart</author>
+    </item>
+
+    <item>
+      <title>Free Tool Alert: How the AffiliCart ASIN Copier Chrome Extension Saves Hours of Amazon Product Research</title>
+      <link>https://affilicartpro.com/blog/asin-copier-chrome-extension.html</link>
+      <guid>https://affilicartpro.com/blog/asin-copier-chrome-extension.html</guid>
+      <pubDate>Sun, 05 May 2026 00:00:00 GMT</pubDate>
+      <description>Speed up adding products to AffiliCart with the free ASIN Copier Chrome extension. Works on 10 Amazon country stores, 100% private, no data collection. Perfect for busy Amazon Associates.</description>
+      <category>Tools</category>
+      <author>AffiliCart</author>
+    </item>
+
+  </channel>
+</rss>
