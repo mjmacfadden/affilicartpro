@@ -73,6 +73,7 @@ Posts must belong to ONE of these categories:
 - **Tutorials** - Step-by-step how-tos, setup guides, installation
 - **Strategy** - Tips, tactics, optimization, commission strategies
 - **Tools** - Features, extensions, integrations, tooling
+- **Behind the Scenes** - Company story, origin, team updates, lessons learned
 
 ### Step 3: Update the Blog Index
 
@@ -234,12 +235,8 @@ An RSS feed is available at `/blog/feed.xml` for blog subscribers.
   <pubDate>Day, DD Mon YYYY HH:MM:SS GMT</pubDate>
   <description>150-160 character meta description here</description>
   <category>Your Category Name</category>
-  <author>AffiliCart</author>
-  <image>
-    <url>https://affilicartpro.com/img/your-og-image.jpg</url>
-    <title>Your Post Title</title>
-    <link>https://affilicartpro.com/blog/your-post-slug.html</link>
-  </image>
+  <author>mike@affilicartpro.com</author>
+  <media:thumbnail url="https://affilicartpro.com/img/your-og-image.jpg" />
   <content:encoded><![CDATA[
 <h2>Section Title</h2>
 <p>Full article HTML content goes here...</p>
@@ -248,10 +245,11 @@ An RSS feed is available at `/blog/feed.xml` for blog subscribers.
 </item>
 ```
 
-**For the `<image>` section:**
+**For the `<media:thumbnail>` tag:**
 - Use the same OG image URL from your blog post's `<meta property="og:image">` tag
 - This ensures the RSS feed displays the article-specific thumbnail instead of the default site image
-- Format: `https://affilicartpro.com/img/your-image-name.jpg` or `.gif`
+- Format: `https://affilicartpro.com/blog/img/your-image-name.jpg`, `/img/image-name.jpg`, or `.gif`
+- Modern RSS readers (like Feedly) prioritize media:thumbnail for feed display
 
 **For the `<content:encoded>` section:**
 - Copy the HTML from your blog post (all the `<h2>`, `<p>`, `<ul>`, etc. tags between the `<div class="container">` and `</div>`)
@@ -264,11 +262,12 @@ An RSS feed is available at `/blog/feed.xml` for blog subscribers.
 - Tue, 07 May 2026 14:30:00 GMT
 
 **Tips:**
-- Include the `<image>` tag with your post's OG image URL for better feed reader presentation
+- Use media:thumbnail with your post's OG image URL for RSS reader display
 - Use the same description as your post's meta description tag
-- Use the actual publish date/time for `<pubDate>`
+- Use the actual publish date/time for `<pubDate>` (RFC-822 format)
 - Paste new items **before** existing items so newest appears first
 - Keep entries sorted by date (newest at top)
+- Author should always be: `mike@affilicartpro.com`
 
 ## Quick Reference: File Locations
 
@@ -278,8 +277,8 @@ An RSS feed is available at `/blog/feed.xml` for blog subscribers.
 | Getting Started | `/blog/category/getting-started/index.html` | All intro posts |
 | Tutorials | `/blog/category/tutorials/index.html` | All tutorial posts |
 | Strategy | `/blog/category/strategy/index.html` | All strategy posts |
-| Tools | `/blog/category/tools/index.html` | All tool/feature posts |
-| Individual Post | `/blog/post-slug.html` | Single blog post |
+| Tools | `/blog/category/tools/index.html` | All tool/feature posts || Behind the Scenes | `/blog/category/behind-the-scenes/index.html` | All company/origin posts |
+| RSS Feed | `/blog/feed.xml` | Blog subscription feed || Individual Post | `/blog/post-slug.html` | Single blog post |
 
 ## Future Enhancements
 
